@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <img src="photos/spotify logo.jpg" class="logo-img" alt="Logo">
+        <a>Home</a>
+        <a>Search</a>
+        <a>Your Library</a>
+    </div>
+
+    <!-- main content -->
+    <div class="main">
+        <h1>Trending</h1>
+
+        <div class="cards">
+
+            <div class="card" onclick="playSong('the weeknd.mp3', 'The Weeknd')">
+                <img src="photos/the weeknd.jpg" alt="The Weeknd">
+                <h3>The Weeknd</h3>
+            </div>
+
+            <div class="card" onclick="playSong('slimane.mp3', 'Slimane')">
+                <img src="photos/slimane.jpg" alt="Slimane">
+                <h3>Slimane</h3>
+            </div>
+
+            <div class="card" onclick="playSong('gims.mp3', 'Gims')">
+                <img src="photos/gims.jpg" alt="Gims">
+                <h3>Gims</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- player -->
+    <div class="player">
+        <div class="player-left">
+            <p id="now-playing">No song playing</p>
+        </div>
+
+        <div class="player-center">
+            <button class="control-btn" onclick="prevSong()">⏮</button>
+            <button class="control-btn play-btn" onclick="togglePlay()" id="play-btn">▶</button>
+            <button class="control-btn" onclick="nextSong()">⏭</button>
+        </div>
+
+        <div class="player-right">
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1" onchange="setVolume()">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
