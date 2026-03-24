@@ -16,13 +16,13 @@ function playSong(file, artist) {
   audio.play();
   isPlaying = true;
 
-  document.getElementById("now-playing").textContent = "Playing: " + artist;
-  document.getElementById("play-btn").textContent = "⏸";
+  document.getElementById("nowPlaying").textContent = "Playing: " + artist;
+  document.getElementById("playBtn").textContent = "⏸";
 }
 
 // play / pause
 function togglePlay() {
-  const btn = document.getElementById("play-btn");
+  const btn = document.getElementById("playBtn");
 
   if (!audio.src) return;
 
